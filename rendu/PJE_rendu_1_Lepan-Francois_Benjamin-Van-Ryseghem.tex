@@ -35,6 +35,15 @@ Ici, nous avons pris connaissance des différents algorithmes de reconnaissance d
 
 Nous avons ainsi put gérer le suivi des mouvements de doigts par la caméra même si dans certaines situations, la détection des blobs fut mise à défaut.
 
+\section{Suivi des blobs}
+
+Comme nous l'avions constaté précédemment, certains mouvements rendent le suivi des blobs hasardeux. Pour pallier ce problème, nous avons expérimenter un algorithme de suivi des blobs.
+
+Le principe est d'associer les blobs de l'instant \emph{t} à un blob de l'instant \emph{t-1} (en prenant en compte l'apparition et la disparition de blobs).
+
+Pour cela, nous avons mis en place des règles servant à trouver cette correspondance de la façon la plus précise possible.
+
+Grace à ce mécanisme, le suivi des blobs se fait de manières bien plus précise, et résiste à beaucoup plus de mouvements.
 
 \section{Exercice }
 
